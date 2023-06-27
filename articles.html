@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Quantum Compendium || Articles</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./resources/styles/main.css">
+    <link rel="stylesheet" href="./resources/styles/page-styles/articles.css">
+</head>
+
+<body>
+    <nav class="p-2 navbar navbar-expand-lg navbar-dark" style="background-color: #3f51b5">
+        <a href="./index.html" class="navbar-brand">
+            <img id="nav-logo" src="./resources/media/images/logo.png" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#index-nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="index-nav">
+            <div class="mx-2 navbar-nav">
+                <a href="./index.html" class="navbar-item nav-link"><span class="bi-house-door"></span> Home</a>
+                <a href="./articles.html" class="navbar-item nav-link active"><span class="bi-newspaper"></span>
+                    Articles</a>
+                <a href="./resources.html" class="navbar-item nav-link"><span class="bi-book"></span> Resources</a>
+            </div>
+            <div class="mx-2 navbar-nav">
+                <button type="button" class="m-2 navbar-item btn btn-secondary" data-bs-toggle="modal"
+                    data-bs-target="#login-modal">Login</button>
+                <div id="login-modal" class="modal fade" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Log In</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <form action="" method="post">
+                                <div class="modal-body">
+                                    <div>
+                                        <img class="modal-img rounded-top-2"
+                                            src="./resources/media/images/login-pic.jpg">
+                                    </div>
+                                    <div class="form-floating my-3">
+                                        <input type="email" name="email" class="form-control" id="email-field"
+                                            placeholder="name@example.com">
+                                        <label for="email">Email address</label>
+                                    </div>
+                                    <div class="form-floating">
+                                        <input type="password" name="password" class="form-control" id="password-field"
+                                            placeholder="Password">
+                                        <label for="password-field">Password</label>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" name="submit" class="btn btn-primary">Sign In</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="m-2 navbar-item btn btn-primary" data-bs-toggle="modal"
+                    data-bs-target="#register-modal">Register</button>
+                <div id="register-modal" class="modal fade" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Register an account</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <form action="" method="post">
+                                <div class="modal-body">
+                                    <div>
+                                        <img class="modal-img rounded-top-2"
+                                            src="./resources/media/images/login-pic.jpg">
+                                    </div>
+                                    <div class="form-floating my-3">
+                                        <input type="text" name="first-name" class="form-control" id="firstname-field"
+                                            placeholder="John">
+                                        <label for="firstname-field">First Name</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <input type="text" name="last-name" class="form-control" id="lastname-field"
+                                            placeholder="Doe">
+                                        <label for="lastname-field">Last Name</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <input type="email" name="email" class="form-control" id="email-field"
+                                            placeholder="name@example.com">
+                                        <label for="email-field">Email address</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <input type="password" name="password" class="form-control" id="password-field"
+                                            placeholder="Password">
+                                        <label for="password-field">Password</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <input type="password" name="repeatpassword" class="form-control"
+                                            id="repeatpassword-field" placeholder="Repeat Password">
+                                        <label for="repeatpassword-field">Repeat Password</label>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" name="submit" class="btn btn-primary">Register</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="mx-1 my-4 p-2 rounded-4 row g-3 bg-light">
+            <h2 class="text-center"><span class="bi-newspaper"></span> All Articles</h2>
+        </header>
+        <article class="mx-0 my-4 p-2 rounded-4 row g-3 bg-light">
+            <div class="row">
+                <div class="col-lg-6">
+                    <img class="article-img" src="./resources/media/images/articles/john.jpg" alt="">
+                </div>
+                <div class="col-lg-6">
+                    <h3>A Brief History of Quantum Computing</h3>
+                    <p class="lead">The history of quantum computing is a fascinating story of how some of
+                        the smartest people in the world tried to build a machine that could do things that are
+                        impossible for a normal computer.</p>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#history-article">Read More</button>
+                    <div id="history-article" class="modal modal-lg fade" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">A Brief History of Quantum Computing</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>
+                                    The history of quantum computing is a fascinating story of how some of the smartest people in the world tried to build a machine that could do things that are impossible for a normal computer. It all started in the 1980s, when physicists like Richard Feynman and David Deutsch realized that the weird and wonderful laws of quantum mechanics could be used to create a new kind of computing device that could exploit superposition, entanglement, and interference to perform calculations that would take forever on a classical computer. They envisioned a quantum computer as a collection of quantum bits, or qubits, that could exist in two states at once, like Schrödinger's cat, and could interact with each other in spooky ways, like Einstein's spooky action at a distance. They also imagined that by manipulating these qubits with lasers and magnets, they could create quantum algorithms that could solve problems like factoring large numbers, searching databases, and simulating quantum systems.
+                                    </p>
+                                    <p>
+                                    However, building a quantum computer turned out to be much harder than they thought. For one thing, qubits are very fragile and prone to errors caused by noise and interference from the environment. This is known as decoherence, and it is the bane of every quantum engineer's existence. To overcome decoherence, researchers had to invent clever ways to protect and correct qubits, such as using error-correcting codes, fault-tolerant architectures, and quantum error correction. For another thing, qubits are very hard to control and measure. To manipulate qubits, researchers had to use sophisticated techniques like pulse shaping, feedback control, and quantum logic gates. To measure qubits, researchers had to use delicate instruments like single-photon detectors, superconducting circuits, and ion traps.
+                                    </p>
+                                    <p>
+                                    Despite these challenges, quantum computing has made remarkable progress over the years. From the first demonstration of a two-qubit quantum logic gate in 1995 by Peter Shor and Isaac Chuang, to the first realization of a quantum algorithm in 2001 by Andrew Steane and Rainer Blatt, to the first proof of quantum supremacy in 2019 by Google's Sycamore processor, quantum computing has shown that it is not only possible but also practical. Today, there are many companies and institutions working on developing quantum computers for various applications, such as IBM, Microsoft, Google, Amazon, Intel, Alibaba, Rigetti, IonQ, Xanadu, D-Wave, and many more. The future of quantum computing is bright and full of surprises. Who knows what amazing discoveries and inventions await us in this exciting field?
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="mx-0 my-4 p-2 rounded-4 row g-3 bg-light">
+            <div class="row">
+                <div class="col-lg-6">
+                    <img class="article-img" src="./resources/media/images/articles/basics.jpg" alt="">
+                </div>
+                <div class="col-lg-6">
+                    <h3>How does Quantum Computing work, really?</h3>
+                    <p class="lead">If you think regular computers are complicated, wait until you hear about quantum computers. Quantum computers use the weird and wacky rules of quantum physics to perform calculations that would take a normal computer longer than the age of the universe. How do they do that? Well, it's not easy to explain, but let me try.</p>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#basics-article">Read More</button>
+                    <div id="basics-article" class="modal modal-lg fade" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">How does Quantum Computing work, really?</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>
+                                        If you think regular computers are complicated, wait until you hear about quantum computers. Quantum computers use the weird and wacky rules of quantum physics to perform calculations that would take a normal computer longer than the age of the universe. How do they do that? Well, it's not easy to explain, but let me try.
+                                    </p>
+                                    <p>
+                                        The basic unit of information in a normal computer is a bit, which can be either 0 or 1. A quantum computer uses a quantum bit, or qubit, which can be both 0 and 1 at the same time. This is called superposition, and it allows a qubit to store more information than a bit. But that's not all. Qubits can also interact with each other in a way that bits can't. This is called entanglement, and it means that the state of one qubit depends on the state of another qubit, even if they are far apart. This allows a quantum computer to process multiple possibilities at once, instead of one by one.
+
+                                    </p>
+                                    <p>
+                                        Sounds amazing, right? Well, there's a catch. Qubits are very fragile and sensitive to noise and interference. If you try to measure or observe a qubit, you will destroy its superposition and entanglement, and get a random result. This is called decoherence, and it's the biggest challenge for quantum computing. To prevent decoherence, quantum computers need to be isolated from the environment and kept at very low temperatures. They also need special algorithms and error correction techniques to make sure they are doing the right thing.
+                                    </p>
+                                    <p>
+                                        So, quantum computers are not like magic machines that can solve any problem in an instant. They are very powerful tools that can tackle some specific problems that are hard for normal computers, such as cryptography, optimization, machine learning, and simulation. But they also have limitations and challenges that need to be overcome. Quantum computing is still a young and exciting field of research that promises to revolutionize the future of computing.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="mx-0 my-4 p-2 rounded-4 row g-3 bg-light">
+            <div class="row">
+                <div class="col-lg-6">
+                    <img class="article-img" src="./resources/media/images/articles/uses.jpg" alt="">
+                </div>
+                <div class="col-lg-6">
+                    <h3>The Different Use-Cases for Quantum Computers</h3>
+                    <p class="lead">Quantum computers are amazing machines that can perform complex calculations faster than classical computers, using the principles of quantum physics. They have many potential use cases for different industries and fields.</p>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#uses-article">Read More</button>
+                    <div id="uses-article" class="modal modal-lg fade" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">The Different Use-Cases for Quantum Computers</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>
+                                        Quantum computers are amazing machines that can perform complex calculations faster than classical computers, using the principles of quantum physics. They have many potential use cases for different industries and fields, such as:
+                                    </p>
+                                    <ul>
+                                        <li>Pharma R&D: Quantum computers can simulate complex biological systems and drug interactions, which can help discover new treatments and cures for diseases.</li>
+
+                                        <li>Cryptography: Quantum computers can break secure encryption protocols like RSA, which can have implications for cybersecurity and data privacy.</li>
+
+                                        <li>Financial analysis: Quantum computers can use quantum optimization and other methods to analyze global markets, optimize portfolios, price derivatives, and execute trades.</li>
+
+                                        <li>Machine learning and computer science: Quantum computers can detect anomalies, find compressed models, and recognize images and patterns, which can enhance artificial intelligence and data science applications.</li>
+
+                                        <li>Security and mission planning: Quantum computers can detect computer viruses, network intrusion, and optimal routes, which can improve defense and military operations.</li>
+
+                                    </ul>
+                                    <p>
+                                        These are just some of the use cases for quantum computers, but there are many more possibilities to explore. Quantum computing is an exciting and promising technology that can revolutionize many fields and industries in the future.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="text-center text-white" style="background-color: #3f51b5">
+        <div class="container">
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+                © Copyright 2023 Michael Uriel Masigla
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
